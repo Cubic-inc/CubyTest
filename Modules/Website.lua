@@ -7,7 +7,7 @@ return function ()
         port = 8080
     })
 
-    App.use(require('weblit-logger'))
+    --App.use(require('weblit-logger'))
     App.use(require('weblit-auto-headers'))
     App.use(require('weblit-etag-cache'))
 

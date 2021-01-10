@@ -1,2 +1,2 @@
-language = "undefined"
-run = "./luvit bot"
+language = "bash"
+run = "./luvit Bot"
