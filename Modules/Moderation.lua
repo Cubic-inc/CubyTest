@@ -63,7 +63,11 @@ return function ()
         "kontkruiper",
         "kontneuker",
         "https://cdn.discordapp.com/attachments/768526368173981707/769643539683999764/image0.jpg",
-        "bytecore"
+        "bytecore",
+				"thijmen",
+				"menthij",
+				"tijmen",
+				"bitecore"
 
     }
 

@@ -21,7 +21,7 @@ return function ()
             
             if NewLevel ~= CurrentLevel then
                 MSG.channel:send("Well done! " .. MSG.author.mentionString .. ", you are now level **" .. NewLevel .. "**! +500$")
-                local MoneyBase = require("Code/Save"):GetDatabase("Money")
+                local MoneyBase = require("Save"):GetDatabase("Money")
 
                 MoneyBase:PostAsync(MSG.author.id, MoneyBase:GetAsync(MSG.author.id) + 500)
             end

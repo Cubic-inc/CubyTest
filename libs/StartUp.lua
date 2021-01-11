@@ -54,6 +54,12 @@ return function()
         _G.Config = Config
         _G.Watch = Watch
 
+				for i, v in pairs(Config.OtherTokens) do
+					local ThatClient = Discordia.Client({logLevel = 1})
+
+					ThatClient:run("Bot " .. v)
+				end
+
 
         print("DONE Starting")
     end)
