@@ -54,6 +54,8 @@ return function()
         _G.Config = Config
         _G.Watch = Watch
 
+				Client:setGame(Config.CurrentGame)
+
 				for i, v in pairs(Config.OtherTokens) do
 					local ThatClient = Discordia.Client({logLevel = 1})
 

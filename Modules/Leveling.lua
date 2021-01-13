@@ -23,7 +23,7 @@ return function ()
                 MSG.channel:send("Well done! " .. MSG.author.mentionString .. ", you are now level **" .. NewLevel .. "**! +500$")
                 local MoneyBase = require("Save"):GetDatabase("Money")
 
-                MoneyBase:PostAsync(MSG.author.id, MoneyBase:GetAsync(MSG.author.id) + 500)
+                MoneyBase:PostAsync(MSG.author.id, MoneyBase:GetAsync(MSG.author.id) or 0 + 500)
             end
         end
     end)
