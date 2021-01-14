@@ -49,7 +49,7 @@ function DoPost(Store, Key, data)
 		URL = Link .. "/" .. Token .. "/save/" .. Store .. "/" .. Key 
 	end
 
-	local StringData = Query.urlencode(Json.encode(data))
+	local StringData = Json.encode(data)
 
 	Res, Body = Coro.request("POST", URL, {{"Content-Type", "application/json"}}, StringData)
 	Data = Json.parse(Body)
@@ -96,7 +96,7 @@ function Module:GetDatabase(Store)
 	end
 
 	function database:PostAsync(key, value)
-		Cache[Store][key] = value
+		--Cache[Store][key] = value
 
 		return DoPost(Store, key, value)
 	end
@@ -106,14 +106,15 @@ function Module:GetDatabase(Store)
 	end
 
 	function database:GetAsync(key)
-        if Cache[Store][key] then
-            print("Got Cache")
-			return Cache[Store][key]
-        else
-            print("No Cache: Downloading")
+    --if Cache[Store][key] then
+    	--print("Got Cache")
+			--return Cache[Store][key]
+    --else
+      --print("No Cache: Downloading")
 			return DoGet(Store, key)
-		end
+		--end
 	end
+
 	return database
 end
 

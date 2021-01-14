@@ -53,7 +53,7 @@ Client:on("allReady", function()
         Leveling = {
             Main = require("./Modules/Leveling.lua"),
             Commands = {
-                
+                require("./Commands/Leveling.lua")
             }
         },
 
