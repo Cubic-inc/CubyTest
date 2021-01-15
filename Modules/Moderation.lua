@@ -9,6 +9,8 @@ return function ()
         if MSG.channel.id == "685066367526895658" or MSG.channel.id == "759717939631882280" or MSG.channel.id == "758701430642311188" or MSG.channel.id == "775694351141175306" then --[[print("Channel ignored")]] return end
         if MSG.author.bot then --[[print("no bot users")]] return end
 
+				if not MSG.guild then return end
+
        Wait(200)
         
         if not LastMSGs[MSG.author.id] then
@@ -18,9 +20,12 @@ return function ()
         
 
         if LastMSGs[MSG.author.id].Content == MSG.content then
-			MSG:reply(MSG.author.pingString .. " Do not repeat messages!")
+						local Notice = MSG:reply(MSG.author.pingString .. " Do not repeat messages!")
             MSG:delete()
             LastMSGs[MSG.author.id] = {Content = MSG.content, Times = LastMSGs[MSG.author.id].Times + 1}
+
+						Wait(3000)
+						Notice:delete()
             
         else
             LastMSGs[MSG.author.id].Times = 0
@@ -75,6 +80,7 @@ return function ()
 
     Client:on("messageCreate", function(MSG)
         if MSG.author.bot then --[[print("no bot users")]] return end
+				if not MSG.guild then return end
         
         local Found = false
 
@@ -87,8 +93,11 @@ return function ()
 
 
         if Found == true then
-            MSG:reply(MSG.author.pingString .. " a swearword was found in your message and it was deleted\nYou may get warned if you continue")
+            local Notice = MSG:reply(MSG.author.pingString .. " a swearword was found in your message and it was deleted\nYou may get warned if you continue")
             MSG:delete()
+
+						Wait(5000)
+						Notice:delete()
         end
 
     end)

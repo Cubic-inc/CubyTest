@@ -13,11 +13,12 @@ return function ()
 
 		IA:reply(
 			Format(
-			"You are level **%s**!\nWith **%s** XP!\nAnd **%s**$!",
+			"%s, \nYou are level **%s**!\nWith **%s** XP!\nAnd **%s**$!",
+			IA.member.user.pingString,
 		 	LevelModule.GetLevel(IA.member),
 			LevelModule.GetXp(IA.member),
 			LevelModule.GetMoney(IA.member)
-			), true, true)
+			), true, false)
 
 	end)
 

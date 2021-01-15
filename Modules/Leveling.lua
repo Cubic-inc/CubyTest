@@ -6,6 +6,7 @@ return function ()
     Client:on("messageCreate", function(MSG)
         if MSG.channel.id == "685066367526895658" or MSG.channel.id == "759717939631882280" or MSG.channel.id == "758701430642311188" then return end
         if MSG.author.bot then return end
+				if not MSG.guild then return end
         
         local CurrentXp = DataBase:GetAsync(MSG.author.id) or 0
         local CurrentLevel = CalcLevel(CurrentXp)

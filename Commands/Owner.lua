@@ -38,7 +38,7 @@ return function ()
 
 	MisfortuneCommand:callback(function(Inter, Params, Cmd)
 		
-		if not UserIs(Inter, "Owner") then
+		if not UserIs(Inter, "HeadAdmin") then
 			return
 		end
 		
@@ -109,7 +109,7 @@ return function ()
 	local SayCommand = Slash.new("say", "Say as the bot.")
 	SayCommand:option("string", "String to send", OptionType.string, true)
 	SayCommand:callback(function (Inter, Params, Cmd)
-		if not UserIs(Inter, "Owner") then
+		if not UserIs(Inter, "HeadAdmin") then
 			return
 		end
 
