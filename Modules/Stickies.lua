@@ -1,7 +1,7 @@
 return function ()
     
     local Client = _G.Client
-    local Database = require("save"):GetDatabase("stickies")
+    local Database = require("Save"):GetDatabase("stickies")
 
     local BaseSticky = {
         ChannelId = "0",

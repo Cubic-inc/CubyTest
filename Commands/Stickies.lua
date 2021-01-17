@@ -4,7 +4,7 @@ return function ()
     local Slash = _G.Slash
     local SaveCommand = _G.SaveCommand
     local OptionType = Slash.enums.optionType
-    local Database = require("save"):GetDatabase("stickies")
+    local Database = require("Save"):GetDatabase("stickies")
 
     local BaseSticky = {
         ChannelId = "0",

@@ -17,3 +17,8 @@ ffmpeg.exe
 opus.dll
 sodium.dll
 youtube-dl.exe
+
+ffmpeg
+
+libopus.so
+libsodium.so
