@@ -7,7 +7,7 @@ return function ()
 
 	local LevelModule = require("Level")
 
-	local StatsCommand = Slash.new("stats", "Get your money and level")
+	local StatsCommand = Slash.new("stats", "Get your money and level | Access for everyone!")
 
 	StatsCommand:callback(function(IA, Params, Cmd)
 

@@ -18,6 +18,7 @@ return function()
     local Date = Discordia.Date
 
     local DevMode = Config.IsDevMode
+    CassieRunning = false
 
     Client:once("ready", function()
         print("Client Ready")
@@ -42,6 +43,12 @@ return function()
 
         _G.Guild = Guild
         _G.Discordia = Discordia
+
+        _G.GetVoice = function ()
+            return Guild.connection
+        end
+        
+        
 
         _G.CalcLevel = function (Xp)
             local Count = 50

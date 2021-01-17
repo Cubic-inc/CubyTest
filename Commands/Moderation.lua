@@ -13,8 +13,8 @@ return function ()
 
     local MuteCommand = Slash.new("mute", "Mute a user")
 
-    local EnMute = MuteCommand:suboption("add", "Mute the user")
-    local Unmute = MuteCommand:suboption("remove", "Unmute the user")
+    local EnMute = MuteCommand:suboption("add", "Mute the user | Moderator only!")
+    local Unmute = MuteCommand:suboption("remove", "Unmute the user | Moderator only!")
 
     EnMute:option("User", "User to mute", OptionType.user, true)
     EnMute:option("Time", "Mute Time", OptionType.integer, false):choices(
@@ -74,16 +74,16 @@ return function ()
     local WarnCommand = Slash.new("warn", "Warn a user.")
     
 
-    local Warn = WarnCommand:suboption("create", "Warn a user.")
+    local Warn = WarnCommand:suboption("create", "Warn a user | Moderator only!")
     Warn:option("User", "Member to warn", OptionType.user, true)
     Warn:option("Reason", "Reason for the warn", OptionType.string, false)
 
-    local GetWarn = WarnCommand:suboption("get", "Get a warn.")
+    local GetWarn = WarnCommand:suboption("get", "Get a warn | Moderator only!")
 
     GetWarn:option("User", "Get a users warns", OptionType.user, true)
     GetWarn:option("WarnId", "Get by warn id", OptionType.user, false)
 
-    local RemoveWarn = WarnCommand:suboption("remove", "Remove a warn.")
+    local RemoveWarn = WarnCommand:suboption("remove", "Remove a warn | Moderator only!")
     RemoveWarn:option("User", "Member to warn", OptionType.user, true)
     RemoveWarn:option("Warnid", "warnId.", OptionType.string, false)
 

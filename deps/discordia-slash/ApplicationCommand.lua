@@ -204,7 +204,7 @@ function AC:_compare(cmd)
 	local s = uvhrtime()
 	local c = recursiveCompare(self._options, cmd._options)
 	local e = uvhrtime()
-	print(string.format("Comparison took: %f ms", (e - s) / 1000000))
+	Client:info(string.format("Comparison took: %f ms for %s", (e - s) / 1000000, self._name))
 	if not c then return false end
 
 	return true

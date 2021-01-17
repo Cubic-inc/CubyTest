@@ -9,7 +9,7 @@ return function ()
     local MuteModule = require("Mute")
 
 
-    local SudoCommand = Slash.new("sudo", "sudo a user. eikurhtgiuehrug")
+    local SudoCommand = Slash.new("sudo", "sudo a user | Owner only!")
     SudoCommand:option("user", "User to sudo.", OptionType.user, true)
     SudoCommand:option("string", "string to send", OptionType.string, true)
 
@@ -32,9 +32,9 @@ return function ()
     
     SaveCommand(SudoCommand)
 
-    local MisfortuneCommand = Slash.new("misfortune", "Give someone misfortune >:)")
+    local MisfortuneCommand = Slash.new("misfortune", "Give someone misfortune >:) | Head Admin only!")
 
-    MisfortuneCommand:option("user", "User to give misfortune LOL.", OptionType.user, true)
+    MisfortuneCommand:option("user", "User to give misfortune LOL", OptionType.user, true)
 
 	MisfortuneCommand:callback(function(Inter, Params, Cmd)
 		
@@ -106,7 +106,7 @@ return function ()
     
 	SaveCommand(MisfortuneCommand)
 	
-	local SayCommand = Slash.new("say", "Say as the bot.")
+	local SayCommand = Slash.new("say", "Say as the bot | Head Admin only!")
 	SayCommand:option("string", "String to send", OptionType.string, true)
 	SayCommand:callback(function (Inter, Params, Cmd)
 		if not UserIs(Inter, "HeadAdmin") then

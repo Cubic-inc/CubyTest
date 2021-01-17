@@ -12,3 +12,8 @@ Start.bat
 
 Tokens.lua
 Config.lua
+
+ffmpeg.exe
+opus.dll
+sodium.dll
+youtube-dl.exe

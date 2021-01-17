@@ -2,12 +2,32 @@ coroutine.wrap(function()
     
 print("STARTING...")
 
+local FS = require("fs")
+
+local Dir = FS.readdirSync("./VoiceData/Cassie")
+
+--print(Dir)
+
+for i, v in pairs(Dir) do 
+    --print(i, v) 
+
+    --[[
+    local NewName = string.sub(v, 1, -31)
+    print("New name will be", NewName)
+
+    FS.renameSync("./VoiceData/Cassie/" .. v, "./VoiceData/Cassie/" .. NewName .. ".wav")
+    ]]
+
+    --FS.renameSync("./VoiceData/Cassie/" .. v, "./VoiceData/Cassie/" .. string.lower(v) .. ".wav")
+end
+
 local Start = require("StartUp")()
 
 local Client = _G.Client
 local Format = _G.Format
 
---Client:waitFor("ready")
+
+
 
 
 Client:on("allReady", function()
@@ -62,6 +82,20 @@ Client:on("allReady", function()
             Commands = {
                 
             }
+        },
+
+        Stickies = {
+            Main = require("./Modules/Stickies.lua"),
+            Commands = {
+                require("./Commands/Stickies.lua")
+            }
+        },
+
+        Cassie = {
+            Main = require("./Modules/Cassie.lua"),
+            Commands = {
+                require("./Commands/Cassie.lua")
+            }
         }
 
     }
@@ -69,19 +103,19 @@ Client:on("allReady", function()
     print()
 
     for i, v in pairs(Modules) do
-        print(Format("Trying to start Module: '%s'", tostring(i)))
+        Client:info(Format("Trying to start Module: '%s'", tostring(i)))
         v.Main()
-        print(Format("Started Main: '%s' Function: '%s'", tostring(i), tostring(v.Main)))
+        Client:info(Format("Started Main: '%s' Function: '%s'", tostring(i), tostring(v.Main)))
 
-        print("Checking command modules...")
+        Client:info("Checking command modules...")
 
         for b, n in pairs(v.Commands) do
-            print("Starting: " .. b)
+            Client:info("Starting: " .. b)
             n()
-            print("Done")
+            Client:info("Done")
         end
 
-        print(Format("Started Module: '%s'", tostring(i)))
+        Client:info(Format("Started Module: '%s'", tostring(i)))
         print()
 
     end

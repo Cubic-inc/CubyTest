@@ -3,21 +3,21 @@ return function ()
     local Slash = _G.Slash
     local SaveCommand = _G.SaveCommand
 
-    local PingCommand = Slash.new("ping", "Pong!")
+    local PingCommand = Slash.new("ping", "Pong! | Access for everyone")
     PingCommand:callback(function (Inter, Params, Cmd)
         Inter:reply("Pong, Cuby operational.")
     end)
 
     SaveCommand(PingCommand)
 
-    local CoolCommand = Slash.new("cool", "Get your cool %.")
+    local CoolCommand = Slash.new("cool", "Get your cool % | Access for everyone!")
 	CoolCommand:callback(function(Inter, Params, Cmd)
 		Inter:reply("You are " .. math.random(0, 100) .. "% Cool :ice_cube: " .. Inter.member.user.mentionString)
     end) 
 
     SaveCommand(CoolCommand)
 
-    local InfoCommand = Slash.new("info", "Get info")
+    local InfoCommand = Slash.new("info", "Get info | Access for everyone!")
 	InfoCommand:callback(function(Inter, Params, Cmd)
 
 		local TimeTable = _G.Watch:getTime()
