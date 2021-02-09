@@ -34,7 +34,7 @@ return function ()
                 end
             end)
 
-            Wait(7 * 1000)
+            Wait(12 * 1000)
 
 						if not AnotherMSG then
 							MSG.channel:broadcastTyping()
