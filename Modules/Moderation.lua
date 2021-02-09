@@ -48,7 +48,6 @@ return function ()
         "kuttenkop",
         "loser",
         "lummel",
-        "lul",
         "piemel",
         "kaashoer",
         "hoer",
@@ -72,7 +71,8 @@ return function ()
 				"thijmen",
 				"menthij",
 				"tijmen",
-				"bitecore"
+				"bitecore",
+				"byte core"
 
     }
 

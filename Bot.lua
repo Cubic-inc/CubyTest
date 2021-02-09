@@ -2,24 +2,6 @@ coroutine.wrap(function()
     
 print("STARTING...")
 
-local FS = require("fs")
-
-local Dir = FS.readdirSync("./VoiceData/Cassie")
-
---print(Dir)
-
-for i, v in pairs(Dir) do 
-    --print(i, v) 
-
-    --[[
-    local NewName = string.sub(v, 1, -31)
-    print("New name will be", NewName)
-
-    FS.renameSync("./VoiceData/Cassie/" .. v, "./VoiceData/Cassie/" .. NewName .. ".wav")
-    ]]
-
-    --FS.renameSync("./VoiceData/Cassie/" .. v, "./VoiceData/Cassie/" .. string.lower(v) .. ".wav")
-end
 
 local Start = require("StartUp")()
 
@@ -31,7 +13,6 @@ local Format = _G.Format
 
 
 Client:on("allReady", function()
-
 
     local Modules = {
 
@@ -91,12 +72,12 @@ Client:on("allReady", function()
             }
         },
 
-        Cassie = {
+        --[[Cassie = {
             Main = require("./Modules/Cassie.lua"),
             Commands = {
                 require("./Commands/Cassie.lua")
             }
-        }
+        }]]
 
     }
 

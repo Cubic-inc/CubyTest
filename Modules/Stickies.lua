@@ -34,7 +34,7 @@ return function ()
                 end
             end)
 
-            Wait(5 * 1000)
+            Wait(20 * 1000)
 
             if not AnotherMSG then
 
