@@ -20,6 +20,17 @@ return function()
     local DevMode = Config.IsDevMode
     CassieRunning = false
 
+		print("\n\n\n")
+
+		Client:info("░█████╗░██╗░░░██╗██████╗░██╗░░░██╗")
+		Client:info("██╔══██╗██║░░░██║██╔══██╗╚██╗░██╔╝")
+		Client:info("██║░░╚═╝██║░░░██║██████╦╝░╚████╔╝░")
+		Client:info("██║░░██╗██║░░░██║██╔══██╗░░╚██╔╝░░")
+		Client:info("╚█████╔╝╚██████╔╝██████╦╝░░░██║░░░")
+		Client:info("░╚════╝░░╚═════╝░╚═════╝░░░░╚═╝░░░")
+
+		print("\n\n\n")
+
     Client:once("ready", function()
         print("Client Ready")
         print()
