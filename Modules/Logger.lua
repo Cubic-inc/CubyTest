@@ -49,7 +49,8 @@ return function ()
         local LogTitle = "Message Delete"
         local LogFields = {
             {name = "**Content**", value = "`" .. Message.cleanContent .. "`", inline = true},
-            {name = "**Member**", value = "`" .. Message.author.tag .. "`", inline = true}
+            {name = "**Member**", value = "`" .. Message.author.tag .. "`", inline = true},
+	    {name = "**Channel**", value = "`" .. Message.channel.name .. "`", inline = true}
         }
                 
         local LogColor = 0xFF0000
