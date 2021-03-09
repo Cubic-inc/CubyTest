@@ -13,7 +13,7 @@ function Module.Create (Channel, Member, Reason)
     local ToSend = {
         content = "<@" .. Member.id .. ">",
         embed = {
-            description = Format("Warned **`%s`**\nWith Reason: **`%s`**", Member.tag, Reason),
+            description = Format("Warned **`%s`**\nWith Reason: **`%s`**\nWith id: **`%s`**", Member.tag, Reason, SaveId),
             color = 0xff7e00
     }}
     local Message = Channel:send(ToSend)
