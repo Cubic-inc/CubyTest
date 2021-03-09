@@ -44,6 +44,7 @@ return function ()
 
         if not Message then return end
         if Message.author.bot == true then return end
+	if not Message.guild then return end
         
 
         local LogTitle = "Message Delete"
