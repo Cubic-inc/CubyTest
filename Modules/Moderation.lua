@@ -19,7 +19,7 @@ return function ()
         
         
 
-        if LastMSGs[MSG.author.id].Content == MSG.content then
+        if LastMSGs[MSG.author.id].Content == MSG.content and not MSG.content == "" then
 						local Notice = MSG:reply(MSG.author.pingString .. " Do not repeat messages!")
             MSG:delete()
             LastMSGs[MSG.author.id] = {Content = MSG.content, Times = LastMSGs[MSG.author.id].Times + 1}
