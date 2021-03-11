@@ -101,6 +101,9 @@ Client:on("allReady", function()
 
     end
 
+    print()
+    Client:info("Fully started!")
+
 
 
 end)
