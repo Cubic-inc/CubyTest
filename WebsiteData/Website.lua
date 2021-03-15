@@ -16,13 +16,13 @@ return function ()
 
     App.bind({
         host = "0.0.0.0",
-        port = 443
+        port = 8080
     })
 
-    --[[App.bind({
+    App.bind({
         host = "0.0.0.0",
-        port = 80
-    })]]
+        port = 8443
+    })
 
     App.use(require('weblit-auto-headers'))
     App.use(require('weblit-etag-cache'))
