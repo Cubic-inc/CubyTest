@@ -58,26 +58,12 @@ Client:on("allReady", function()
             }
         },
 
-        Website = {
-            Main = require("./Modules/Website.lua"),
-            Commands = {
-                
-            }
-        },
-
         Stickies = {
             Main = require("./Modules/Stickies.lua"),
             Commands = {
                 require("./Commands/Stickies.lua")
             }
-        },
-
-        --[[Cassie = {
-            Main = require("./Modules/Cassie.lua"),
-            Commands = {
-                require("./Commands/Cassie.lua")
-            }
-        }]]
+        }
 
     }
 
@@ -103,6 +89,12 @@ Client:on("allReady", function()
 
     print()
     Client:info("Fully started!")
+    print()
+
+    Client:info("Starting website....")
+    print()
+
+    require("./WebsiteData/Website")()
 
 
 

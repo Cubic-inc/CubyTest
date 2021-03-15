@@ -7,7 +7,8 @@ return function ()
     local Pages = {
 
         Home = require("WebsiteData/PageHandlers/Home"),
-        Invite = require("WebsiteData/PageHandlers/Invite")
+        Invite = require("WebsiteData/PageHandlers/Invite"),
+        Partners = require("WebsiteData/PageHandlers/Partners"),
 
     } 
 
@@ -39,5 +40,7 @@ return function ()
     end
 
     App.start()
+
+    print("Website started!")
 
 end
