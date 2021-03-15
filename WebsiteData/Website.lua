@@ -15,12 +15,12 @@ return function ()
     _G.Readfile = require("fs").readFileSync
 
     App.bind({
-        host = "0.0.0.0",
+        host = "127.0.0.1",
         port = 8080
     })
 
     App.bind({
-        host = "0.0.0.0",
+        host = "127.0.0.1",
         port = 8443
     })
 
