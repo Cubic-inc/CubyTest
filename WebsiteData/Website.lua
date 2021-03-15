@@ -16,7 +16,12 @@ return function ()
 
     App.bind({
         host = "0.0.0.0",
-        port = 8080
+        port = 443
+    })
+
+    App.bind({
+        host = "0.0.0.0",
+        port = 80
     })
 
     App.use(require('weblit-auto-headers'))
