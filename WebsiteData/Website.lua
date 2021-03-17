@@ -8,7 +8,8 @@ return function ()
 
         Home = require("WebsiteData/PageHandlers/Home"),
         Invite = require("WebsiteData/PageHandlers/Invite"),
-        Partners = require("WebsiteData/PageHandlers/Partners"),
+        Credits = require("WebsiteData/PageHandlers/Credits"),
+        Join = require("WebsiteData/PageHandlers/Join"),
 
     } 
 
