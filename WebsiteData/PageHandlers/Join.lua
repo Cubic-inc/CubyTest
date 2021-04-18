@@ -1,5 +1,6 @@
 return function(App)
 
+    --[[
     App.route(
     {path = "/", method = "GET", host = "join.cubicinc.ga"}, 
     function(Request, Response, Go)
@@ -8,6 +9,6 @@ return function(App)
         Response.code = 200
         Response.headers["Content-Type"] = "text/html"
     
-    end)
+    end)]]
 
 end
